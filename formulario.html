@@ -228,127 +228,193 @@
 
     <section id="cursos" class="pricing-area">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 col-md-10">
-            <div class="section-title text-center pb-25">
-              <h3 class="title">Inscreva seu filho</h3>
+        <form method="post" action="">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-10">
+              <div class="section-title text-center pb-25">
+                <h3 class="title">Inscreva seu filho</h3>
+              </div>
+              <!-- section title -->
             </div>
-            <!-- section title -->
           </div>
-        </div>
-      
-        <div class="row">
-          <p class="text">Dados do Aluno</p>
-
+        
           <div class="row">
-            <div class="col-lg-9 col-sm-12 search__container">
-              <input class="search__input" type="text" placeholder="Nome do aluno" name="nomeAluno"  id="nomeAluno" required>
+            <p class="text">Dados do Aluno</p>
+  
+            <div class="row">
+              <div class="col-lg-9 col-sm-12 search__container">
+                <input class="search__input" type="text" placeholder="Nome do aluno" name="nomeAluno"  id="nomeAluno" required>
+              </div>
+              <div class="col-lg-3 col-sm-12 search__container">
+                <input class="search__input" type="text" placeholder="CEP" name="cep"  id="cep" value="" onkeypress="$(this).mask('00000-000')" onblur="pesquisacep(this.value);" >
+              </div>
+              <div class="col-lg-7 col-sm-12 search__container">
+                <input class="search__input" type="text" placeholder="Endereço" id="endereco" name="endereco">
+              </div>
+              <div class="col-lg-5 col-sm-12 search__container">
+                <input class="search__input" type="text" placeholder="Bairro" id="bairro" name="cidade">
+              </div>
+              <div class="col-lg-4 col-sm-12 search__container">
+                <input class="search__input" type="text" placeholder="Cidade" id="cidade" name="cidade">
+              </div>
+              <div class="col-lg-4 col-sm-12 search__container">
+                <input class="search__input" type="text" placeholder="Estado" id="estado" name="estado" id="estado">
+              </div>
+              <div class="col-lg-4 col-sm-12 search__container">
+                <input class="search__input" type="text" placeholder="Número" name="numero" id="número">
+              </div>
+              <div class="col-lg-12 col-sm-12 search__container">
+                <input class="search__input" type="text" placeholder="Complemento" name="complemento" id="complemento">
+              </div>
+              <div class="col-lg-3 col-sm-12 search__container">
+                <input class="search__input" type="text" placeholder="Telefone"  name="telefoneFilho" onkeypress="$(this).mask('(00) 0000-00009')">
+              </div>
+              <div class="col-lg-3 col-sm-12 search__container">
+                <input class="search__input" type="text" placeholder="Celular"  name="celularAluno" onkeypress="$(this).mask('(00) 0000-00009')" required>
+              </div>
+              <div class="col-lg-6 col-sm-12 search__container">
+                <input class="search__input" type="text" placeholder="E-mail" name="emailAluno" id="emailAluno" required>
+              </div>
+              <div class="col-lg-12 col-sm-12 subject">
+                <select placeholder="COR" name="cor" id="cor" required>
+                  <option disabled selected>COR</option>
+                  <option value="Branca">Branca</option>
+                  <option value="Preta">Preta</option>
+                  <option value="Parda">Parda</option>
+                  <option value="Amarela">Amarela</option>
+                  <option value="Indígena">Indígena</option>
+                </select>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-12 search__container">
-              <input class="search__input" type="text" placeholder="CEP" name="cep"  id="cep" value="" onkeypress="$(this).mask('00000-000')" onblur="pesquisacep(this.value);" >
-            </div>
-            <div class="col-lg-7 col-sm-12 search__container">
-              <input class="search__input" type="text" placeholder="Endereço" id="endereco" name="endereco">
-            </div>
-            <div class="col-lg-5 col-sm-12 search__container">
-              <input class="search__input" type="text" placeholder="Bairro" id="bairro" name="cidade">
-            </div>
-            <div class="col-lg-4 col-sm-12 search__container">
-              <input class="search__input" type="text" placeholder="Cidade" id="cidade" name="cidade">
-            </div>
-            <div class="col-lg-4 col-sm-12 search__container">
-              <input class="search__input" type="text" placeholder="Estado" id="estado" name="estado" id="estado">
-            </div>
-            <div class="col-lg-4 col-sm-12 search__container">
-              <input class="search__input" type="text" placeholder="Número" name="numero" id="número">
-            </div>
-            <div class="col-lg-12 col-sm-12 search__container">
-              <input class="search__input" type="text" placeholder="Complemento" name="complemento" id="complemento">
-            </div>
-            <div class="col-lg-3 col-sm-12 search__container">
-              <input class="search__input" type="text" placeholder="Telefone"  name="telefoneFilho" onkeypress="$(this).mask('(00) 0000-00009')">
-            </div>
-            <div class="col-lg-3 col-sm-12 search__container">
-              <input class="search__input" type="text" placeholder="Celular"  name="celularAluno" onkeypress="$(this).mask('(00) 0000-00009')" required>
-            </div>
-            <div class="col-lg-6 col-sm-12 search__container">
-              <input class="search__input" type="text" placeholder="E-mail" name="emailAluno" id="emailAluno" required>
-            </div>
-            <div class="col-lg-12 col-sm-12 subject">
-              <select placeholder="COR" name="cor" id="cor" required>
-                <option disabled selected>COR</option>
-                <option>Branca</option>
-                <option>Preta</option>
-                <option>Parda</option>
-                <option>Amarela</option>
-                <option>Indígena</option>
+  
+              <!-- Dados Pais -->
+              <p class="text mt-30">Dados do Pai</p>
+  
+              <div class="row">
+                  <div class="col-lg-9 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="nomePai" id="nomePai" placeholder="Nome do Pai">
+                  </div>
+                  <div class="col-lg-3 col-sm-12 search__container">
+                    <input class="search__input" type="date" name="dataNascimentoPai" id="dataNascimentoPai" placeholder="Data de Nascimento">
+                  </div>
+                  <div class="col-lg-4 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="naturalidadePai" id="naturalidadePai" placeholder="Naturalidade">
+                  </div>
+                  <div class="col-lg-4 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="profissaoPai" id="profissaoPai" placeholder="Instrução Profissional">
+                  </div>
+                  <div class="col-lg-4 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="cpfPai" id="cpfPai" placeholder="CPF" onkeypress="$(this).mask('000.000.000-00');">
+                  </div>
+                  <div class="col-lg-3 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="telefonePai" id="telefonePai" placeholder="Telefone" onkeypress="$(this).mask('(00) 0000-00009')">
+                  </div>
+                  <div class="col-lg-3 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="celularPai" id="celularPai" placeholder="Celular" onkeypress="$(this).mask('(00) 0000-00009')">
+                  </div>
+                  <div class="col-lg-6 col-sm-12 search__container">
+                    <input class="search__input" type="email" name="emailPai" id="emailPai" placeholder="E-mail">
+                  </div>
+                  <div class="col-lg-12 col-sm-12 subject">
+                    <select placeholder="RESPONSÁVEL FINANCEIRO" name="responsavelFinanceiro" id="responsavelFinanceiro" required>
+                      <option disabled selected>RESPONSÁVEL FINANCEIRO</option>
+                      <option value=true>Sim</option>
+                      <option value=false>Não</option>
+                    </select>
+                  </div>
+              </div>
+
+              <p class="text mt-30">Dados do Mãe</p>
+  
+              <div class="row">
+                  <div class="col-lg-9 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="nomeMae" id="nomeMae" placeholder="Nome da Mãe">
+                  </div>
+                  <div class="col-lg-3 col-sm-12 search__container">
+                    <input class="search__input" type="date" name="dataNascimentoMae" id="dataNascimentoMae" placeholder="Data de Nascimento">
+                  </div>
+                  <div class="col-lg-4 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="naturalidadeMae" id="naturalidadeMae" placeholder="Naturalidade">
+                  </div>
+                  <div class="col-lg-4 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="profissaoMae" id="profissaoMae" placeholder="Instrução Profissional">
+                  </div>
+                  <div class="col-lg-4 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="cpfMae" id="cpfMae" placeholder="CPF" onkeypress="$(this).mask('000.000.000-00');">
+                  </div>
+                  <div class="col-lg-3 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="telefoneMae" id="telefoneMae" placeholder="Telefone" onkeypress="$(this).mask('(00) 0000-00009')">
+                  </div>
+                  <div class="col-lg-3 col-sm-12 search__container">
+                    <input class="search__input" type="text" name="celularMae" id="celularMae" placeholder="Celular" onkeypress="$(this).mask('(00) 0000-00009')">
+                  </div>
+                  <div class="col-lg-6 col-sm-12 search__container">
+                    <input class="search__input" type="email" name="emailMae" id="emailMae" placeholder="E-mail">
+                  </div>
+                  <div class="col-lg-12 col-sm-12 subject">
+                    <select placeholder="RESPONSÁVEL FINANCEIRO" name="responsavelFinanceiro" id="responsavelFinanceiro" required>
+                      <option disabled selected>RESPONSÁVEL FINANCEIRO</option>
+                      <option value=true>Sim</option>
+                      <option value=false>Não</option>
+                    </select>
+                  </div>
+              </div>
+          
+          <!-- Dados Curso -->
+          <p class="text mt-30">Dados do Curso</p>
+  
+          <div class="row">
+            <div class="col-lg-9 col-sm-12 subject">
+              <select placeholder="CURSO" name="curso" id="curso" required>
+                <option  value=0 disabled selected>CURSO</option>
+                <option value=1>Desenvolvedor De Aplicativos</option>
+                <option value=2>Programação Avançada Com Tecnologia Espacial</option>
+                <option value=3>Introdução À Programação</option>
+                <option value=4>Marketing Digital</option>
+                <option value=5>Introdução À Escala musical</option>
+                <option value=6>Como ler partitura</option>
+                <option value=7>Guitarra</option>
+                <option value=8>Violão clássico</option>
+                <option value=9>Alemão : Básico á avançado</option>
+                <option value=10>Espanhol : Básico á avançado</option>
+                <option value=11>Inglês : Básico á avançado</option>
+                <option value=12>Italiano : Básico á avançado</option>
               </select>
             </div>
-          </div>
-
-            <!-- Dados Pais -->
-            <p class="text mt-30">Dados do Pai</p>
-
-            <div class="row">
-                <div class="col-lg-9 col-sm-12 search__container">
-                  <input class="search__input" type="text" name="nomePai" id="nomePai" placeholder="Nome do Pai">
-                </div>
-                <div class="col-lg-3 col-sm-12 search__container">
-                  <input class="search__input" type="date" name="dataNascimentoPai" id="dataNascimentoPai" placeholder="Data de Nascimento">
-                </div>
-                <div class="col-lg-4 col-sm-12 search__container">
-                  <input class="search__input" type="text" name="naturalidadePai" id="naturalidadePai" placeholder="Naturalidade">
-                </div>
-                <div class="col-lg-4 col-sm-12 search__container">
-                  <input class="search__input" type="text" name="profissaoPai" id="profissaoPai" placeholder="Instrução Profissional">
-                </div>
-                <div class="col-lg-4 col-sm-12 search__container">
-                  <input class="search__input" type="text" name="cpfPai" id="cpfPai" placeholder="CPF" onkeypress="$(this).mask('000.000.000-00');">
-                </div>
-                <div class="col-lg-3 col-sm-12 search__container">
-                  <input class="search__input" type="text" name="telefonePai" id="telefonePai" placeholder="Telefone" onkeypress="$(this).mask('(00) 0000-00009')">
-                </div>
-                <div class="col-lg-3 col-sm-12 search__container">
-                  <input class="search__input" type="text" name="celularPai" id="celularPai" placeholder="Celular" onkeypress="$(this).mask('(00) 0000-00009')">
-                </div>
-                <div class="col-lg-6 col-sm-12 search__container">
-                  <input class="search__input" type="email" name="emailPai" id="emailPai" placeholder="E-mail">
-                </div>
-                <div class="col-lg-12 col-sm-12 subject">
-                  <select placeholder="RESPONSÁVEL FINANCEIRO" name="responsavelFinanceiro" id="responsavelFinanceiro" required>
-                    <option disabled selected>RESPONSÁVEL FINANCEIRO</option>
-                    <option value=true>Sim</option>
-                    <option value=false>Não</option>
-                  </select>
-                </div>
+            
+            <div class="col-lg-3 col-sm-12 search__container">
+              <input class="search__input" type="text" placeholder="Valor" name="valor" id="valor" required>
             </div>
-        
-        <!-- Dados Curso -->
-        <p class="text mt-30">Dados do Curso</p>
+            
+            <div class="col-lg-6 col-sm-12 search__container">
+              <input class="search__input" type="date" placeholder="Data de Ingresso" name="dataIngresso" id="dataIngresso" required>
+            </div>
 
-        <div class="row">
-          <div class="col-lg-9 col-sm-12 subject">
-            <select placeholder="CURSO" name="curso" id="curso" required>
-              <option disabled selected>CURSO</option>
-              <option value=true>Sim</option>
-              <option value=false>Não</option>
-            </select>
-          </div>
+            <div class="col-lg-6 col-sm-12 subject">
+              <select placeholder="Forma de Pagamento" name="formaPagamento" id="formaPagamento" required>
+                <option disabled selected>FORMA DE PAGAMENTO</option>
+                <option value="x1">X1</option>
+                <option value="x2">X2</option>
+                <option value="x3">X3</option>
+                <option value="x4">X4</option>
+                <option value="x5">X5</option>
+                <option value="x6">X6</option>
+                <option value="x7">X7</option>
+                <option value="x8">X8</option>
+                <option value="x9">X9</option>
+                <option value="x10">X10</option>
+                <option value="x11">X11</option>
+                <option value="x12">X12</option>
+              </select>
+            </div>
+          </div>    
           
-          <div class="col-lg-3 col-sm-12 search__container">
-            <input class="search__input" type="text" placeholder="Valor" name="valor" id="valor" required>
-          </div>
-          
-          <div class="col-lg-6 col-sm-12 search__container">
-            <input class="search__input" type="date" placeholder="Data de Ingresso" name="dataIngresso" id="dataIngresso" required>
-          </div>
-  
-          <div class="col-lg-6 col-sm-12 search__container">
-            <input class="search__input" type="text" placeholder="Forma de Pagamento" name="formaPagamento" id="formaPagamento" required>
-          </div>
-        </div>        
-      </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-45">
+          <button class="inscrever w-50" type="submit">ENVIAR</button>
+        </div>
         <!-- row -->
+        </form>
       </div>
       <!-- container -->
     </section>

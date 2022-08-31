@@ -4099,13 +4099,18 @@ td {
   width: 3px;
 }
 
-a.inscrever {
+.inscrever {
   background: -webkit-linear-gradient(#2bdbdc 0%, #0067f4 100%);
   background: -o-linear-gradient(#2bdbdc 0%, #0067f4 100%);
   background: linear-gradient(#2bdbdc 0%, #0067f4 100%);
   border-radius: 8px;
   padding: 10px 15px;
   color: #fff;
+  border: none;
+}
+
+.inscrever:hover{
+  color: #000;
 }
 
 /*===========================

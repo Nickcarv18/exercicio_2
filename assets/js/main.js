@@ -189,10 +189,7 @@ $(function() {
         $('html, body').animate({
             scrollTop: 0,
         }, 1500);
-    });
-    
-    
-    
+    });    
 });
 
 // Validação do CEP
@@ -262,3 +259,17 @@ function meu_callback(conteudo) {
         limpa_formulário_cep();
     }
 };
+
+const parameters = new URLSearchParams(window.location.search);
+let idCurso = parameters.get("idCurso");   
+let valorCurso = parameters.get("valor");   
+
+var options = document.getElementById("curso");
+
+document.getElementById("valor").value = "R$ " + valorCurso;
+
+for( i = 0; i < options.children.length; i++ ) {
+    if( options[i].value === idCurso ){
+        options[i].selected = true;
+    }
+}
